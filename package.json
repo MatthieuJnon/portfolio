@@ -1,0 +1,31 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "A portfolio for myself, Matthieu Joannon",
+  "main": "src/index.js",
+  "repository": "https://github.com/MatthieuJnon/portfolio.git",
+  "author": "Matthieu Joannon <mattjoannon@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "bulma": "^0.7.2",
+    "css-loader": "^1.0.0",
+    "koa": "^2.6.1",
+    "koa-static": "^5.0.0",
+    "node-sass": "^4.9.4",
+    "postcss": "^7.0.5",
+    "postcss-loader": "^3.0.0",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.23.1",
+    "webpack": "^4.23.1"
+  },
+  "scripts": {
+    "start": "node ./index.js",
+    "watch": "webpack --progress --watch",
+    "build": "webpack --progress",
+    "build-prod": "webpack --progress -p"
+  },
+  "devDependencies": {
+    "compression-webpack-plugin": "^2.0.0",
+    "webpack-cli": "^3.1.2"
+  }
+}
