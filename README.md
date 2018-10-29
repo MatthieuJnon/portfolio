@@ -1,22 +1,17 @@
 # portfolio
 A portfolio website for myself, Matthieu Joannon, available soon on matthieujoannon.fr
 
-## Project setup
+## modules installation
 ```
-npm install
-```
-
-### Compiles and hot-reloads for development
-```
-npm run serve
+yarn
 ```
 
 ### Compiles and minifies for production
 ```
-npm run build
+yarn run build-prod
 ```
 
-### Lints and fixes files
+### Starts server
 ```
-npm run lint
+yarn run start
 ```
