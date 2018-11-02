@@ -1,5 +1,5 @@
 # portfolio
-A portfolio website for myself, Matthieu Joannon, available soon on matthieujoannon.fr
+A portfolio website for myself, Matthieu Joannon, available now on [matthieujoannon.fr](http://matthieujoannon.fr)
 
 ## modules installation
 ```
