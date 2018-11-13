@@ -15,33 +15,24 @@
 
     <div class="hero-head">
       <nav class="navbar">
-        <div class="container">
-          <div class="navbar-brand">
-            <span class="navbar-burger burger" data-target="navbarMenuHeroA">
-              <span></span>
-              <span></span>
-              <span></span>
-            </span>
-          </div>
-          <div id="navbarMenuHeroA" class="navbar-menu has-text-right">
-            <div class="navbar-end">
-              <a class="navbar-item navbar-icon-custom" href="https://github.com/MatthieuJnon">
-                <figure>
-                  <img src="img/github.svg" alt="">
-                </figure>
-              </a>
-              <a class="navbar-item navbar-icon-custom" href="https://www.linkedin.com/in/matthieu-joannon">
-                <figure>
-                  <img src="img/linkedin-in.svg" alt="">
-                </figure>
-              </a>
-              <a class="navbar-item" href="#experiences">
-                My work
-              </a>
-              <a class="navbar-item" href="mailto:mattjoannon@gmail.com">
-                Contact me
-              </a>
-            </div>
+        <div class="navbar-brand is-100percent ">
+          <div class="navbar-end is-flex mobile-navbar">
+            <a class="navbar-item navbar-icon-custom" href="https://github.com/MatthieuJnon">
+              <figure>
+                <img src="img/github.svg" alt="">
+              </figure>
+            </a>
+            <a class="navbar-item navbar-icon-custom" href="https://www.linkedin.com/in/matthieu-joannon">
+              <figure>
+                <img src="img/linkedin-in.svg" alt="">
+              </figure>
+            </a>
+            <a class="navbar-item" href="#experiences">
+              My work
+            </a>
+            <a class="navbar-item" href="mailto:mattjoannon@gmail.com">
+              Contact me
+            </a>
           </div>
         </div>
       </nav>
@@ -60,7 +51,7 @@
 
             <p class="subtitle bigger-text-on-desktop">
               A full stack web developer, with experience in <span class="is-react-blue">React</span>, <span class="is-vue-green">Vue.js</span>
-              and Koa.js. Currently in last year of a
+              and <span class=" is-orange">Koa.js</span>. Currently in last year of a
               french
               software engineering school
             </p>
@@ -91,12 +82,13 @@
 
   <section id="experiences" class="hero is-fullheight experiences-bg">
     <section class="hero is-fullheight experiences">
-      <div class="container experiences-subtitle has-text-white">
+      <div class="container has-2rem-padding has-text-white">
         <p class="is-size-5 has-text-centered">
           In September of 2019, I will graduate with a master’s degree in Software engineering from ESEO, Angers,
           France
         </p>
       </div>
+
       <div class="container hero-body" style="padding-top: 0;">
         <div class="tile is-ancestor tile-wrap has-text-danger">
           <div class="tile is-parent">
@@ -116,7 +108,7 @@
                   compliments, the fact that we brought happiness to people made my work there much more rewarding.
                 </p>
               </div>
-              <div class="level">
+              <div class="level is-mobile">
                 <figure class="level-item tech-in-tile">
                   <img src="img/react.svg" alt="">
                 </figure>
@@ -141,7 +133,7 @@
                   discovered my love for good UI/UX there.
                 </p>
               </div>
-              <div class="level">
+              <div class="level is-mobile">
                 <figure class="level-item tech-in-tile">
                   <img src="img/vuejs.svg" alt="">
                 </figure>
@@ -165,7 +157,7 @@
                   parameters such as rush hour or city planning into account.
                 </p>
               </div>
-              <div class="level">
+              <div class="level is-mobile">
                 <figure class="level-item">
                   <img src="img/Gopher.svg" alt="Golang logo" style="height:64px;">
                 </figure>
@@ -183,16 +175,42 @@
           </div>
         </div>
       </div>
+
       <div class="hero-footer" style="margin-bottom:1.5rem;">
-        <div class="level">
-          <a href="mailto:mattjoannon@gmail.com" class="level-item">
-            <figure class="level-item">
-              <img src="img/contactme.svg" alt="" class="avatar-matthieu">
-            </figure>
-          </a>
+        <div class="columns is-1">
+          <div class="column is-2 is-offset-4">
+            <a href="mailto:mattjoannon@gmail.com">
+              <img src="img/contactme-avatar.svg" alt="" class="avatar-matthieu">
+            </a>
+          </div>
+          <div class="column is-2" style="padding-top: 1rem;">
+            <div class="box hidden" >
+               <a href="mailto:mattjoannon@gmail.com" class="has-dark-blue-text">Click here to email me</a>
+            </div>
+            <div class="box has-dark-blue-text hidden">
+              <a href="tel:0033615213630" class="has-dark-blue-text">Or call me at (+33)615213630</a>
+            </div>
+          </div>
+          <div class="is-4">
+
+          </div>
         </div>
+
+        <div class="level has-2rem-padding">
+          <div class="level-item">
+            <p class=" has-text-white">
+              Made by <a href="http://matthieujoannon.fr">Matthieu Joannon</a>. The source code is
+              licensed
+              <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. The website content
+              is licensed <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY NC SA 4.0</a>.
+            </p>
+          </div>
+        </div>
+
       </div>
+
     </section>
+
   </section>
 
 </body>

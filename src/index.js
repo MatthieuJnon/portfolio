@@ -1,27 +1,29 @@
 import './style/main.scss'
 
+import throttle from 'lodash.throttle'
+
 document.addEventListener('DOMContentLoaded', () => {
 
-  // Get all "navbar-burger" elements
-  const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+  const checkPosition = () => {
+    for (var i = 0; i < elementsToAnimate.length; i++) {
+      let positionFromTop = elementsToAnimate[i].getBoundingClientRect().top;
 
-  // Check if there are any navbar burgers
-  if ($navbarBurgers.length > 0) {
-
-    // Add a click event on each of them
-    $navbarBurgers.forEach( el => {
-      el.addEventListener('click', () => {
-
-        // Get the target from the "data-target" attribute
-        const target = el.dataset.target;
-        const $target = document.getElementById(target);
-
-        // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
-        el.classList.toggle('is-active');
-        $target.classList.toggle('is-active');
-
-      });
-    });
+      elementsToAnimate[i].className = ((positionFromTop - windowHeight <= 0) && positionFromTop)
+        ? elementsToAnimate[i].className.replace('hidden', 'scale-in-hor-left')
+        : elementsToAnimate[i].className
+    }
   }
 
-});
+  let elementsToAnimate
+  let windowHeight
+
+  const initAnimateOnScroll = () => {
+    elementsToAnimate = document.querySelectorAll('.hidden')
+    windowHeight = window.innerHeight
+    window.addEventListener('scroll', throttle(checkPosition, 100))
+    window.addEventListener('resize', initAnimateOnScroll)
+    checkPosition()
+  }
+
+  initAnimateOnScroll()
+})

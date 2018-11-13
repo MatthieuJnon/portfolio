@@ -6,9 +6,14 @@ $family-sans-serif: "Montserrat", sans-serif;
 $react-blue: #4a90e2;
 $vue-green: #65a124;
 $dark-blue-grey: #1a2f46;
-$dark-blue: #172d4a;
+$dark-blue: #2f4768;
+$orange: #ec8525;
 
 @import "bulma";
+
+* {
+  transition: all 400ms ease;
+}
 
 @mixin sm {
   @media (max-width: 768px) {
@@ -49,6 +54,14 @@ $dark-blue: #172d4a;
   color: $vue-green;
 }
 
+.has-dark-blue-text {
+  color: $dark-blue !important;
+}
+
+.is-orange {
+  color: orange;
+}
+
 .experiences-bg {
   background-image: url(/img/experience-bg.jpg);
 }
@@ -59,24 +72,20 @@ $dark-blue: #172d4a;
 }
 
 .small-margin-level {
-  margin-bottom: 5px !important;
+  margin-bottom: 0.7rem !important;
 }
 
 .is-slightly-smaller-than-fullheight {
   min-height: calc(100vh - 1rem) !important;
 }
 
-.experiences-subtitle {
+.has-2rem-padding {
   padding: 2rem;
 }
 
 .tile-wrap {
   margin-bottom: 0 !important;
   margin: 1rem;
-}
-
-.has-dark-blue-text {
-  color: $dark-blue !important;
 }
 
 .tech-in-tile {
@@ -88,4 +97,29 @@ $dark-blue: #172d4a;
     height: 240px;
   }
 }
+
+.is-100percent {
+  width: 100%;
+}
+
+.mobile-navbar {
+  @include sm {
+    justify-content: center;
+    width: 100%;
+  }
+  @include desktop {
+    padding-right: 15vw;
+  }
+}
+
+.no-decoration {
+  text-decoration: none !important;
+}
+
+.hidden {
+  opacity: 0
+}
+
+@import "animation"
+
 // @import "debug";
