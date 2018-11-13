@@ -77,10 +77,19 @@ $orange: #ec8525;
 
 .is-slightly-smaller-than-fullheight {
   min-height: calc(100vh - 1rem) !important;
+  @supports (-webkit-appearance:none) {
+    .os-android & {
+      min-height: calc(100vh - 56px - 1rem);
+    }
+  }
 }
 
 .has-2rem-padding {
   padding: 2rem;
+}
+
+.has-0-75-padding {
+  padding: 0.75rem;
 }
 
 .tile-wrap {
